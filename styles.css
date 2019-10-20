@@ -1,4 +1,58 @@
+html {
+    background-color: bisque;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 { 
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+}
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seq-container {
+    /*background-color: rgba(243, 203, 155, 0.829);*/
+    border: 2px solid gray;
+    padding-left: 8px;
+}
+
+.seq-column {
+    display: inline-block;
+}
+
+.seq-switch {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(178, 228, 102);
+    margin: 8px 8px 8px 0;
+    transition: 0.4s;
+}
+
+.seq-switch:hover {
+    background-color: rgb(228, 178, 102);
+    box-shadow: 2px gray;
+}
+
+.active {
+    background-color: rgb(35, 118, 226);
+}
+
+#tone-toggle {
+    width: 140px;
+    height: 50px;
+    background-color: brown;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    margin-top: 16px;
 }
