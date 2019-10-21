@@ -12,13 +12,20 @@ document.querySelector("body").addEventListener("click", (e)=>{
 
 // setup tone
 
-var synth = new Tone.MembraneSynth().toMaster()
+//var synth = new Tone.MembraneSynth().toMaster()
+var synth = new Tone.PolySynth(5, Tone.Synth, {
+    oscillator : {
+          type : "square"
+      }
+  }).toMaster();
+Tone.Transport.bpm.value = 80;
 //Tone.Transport.latencyHint = 'fastest';
 var division = 1;
 
 //create a loop
 var loop = new Tone.Loop(function(time){
-    synth.triggerAttackRelease("C4", "8n", time)
+    let chord = ["C3", "E3", "G3"];
+    synth.triggerAttackRelease(chord, "64n")
     division %= 16;
     division++;
 

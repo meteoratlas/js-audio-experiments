@@ -38,7 +38,7 @@ h1 {
     transition: 0.4s;
 }
 
-.seq-switch:hover {
+.seq-switch:hover:not(.switch-active) {
     background-color: rgb(228, 178, 102);
     box-shadow: 2px gray;
 }
@@ -51,6 +51,7 @@ h1 {
 
 .switch-active {
     background-color: rgb(231, 65, 65);
+    box-shadow: 0 0 4px 4px rgb(231, 65, 65);; /* outer cyan */
 }
 
 #tone-toggle {
