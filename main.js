@@ -11,13 +11,16 @@ document.querySelector("body").addEventListener("click", (e)=>{
 })
 
 // setup tone
-
-//var synth = new Tone.MembraneSynth().toMaster()
+/*
 var synth = new Tone.PolySynth(5, Tone.Synth, {
     oscillator : {
           type : "square"
       }
   }).toMaster();
+  */
+let synth = new Tone.Sampler({
+    "C2": "casio/C2.mp3"
+}).toMaster();
 Tone.Transport.bpm.value = 80;
 //Tone.Transport.latencyHint = 'fastest';
 var division = 1;
